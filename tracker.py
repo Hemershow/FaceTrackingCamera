@@ -1,5 +1,5 @@
 import cv2
-from pyfirmata import Arduino,SERVO, OUTPUT
+from pyfirmata import Arduino, SERVO
 from time import sleep
 import mediapipe as mp
 
@@ -51,9 +51,6 @@ while True:
     results = Face.process(imgRGB)
     facesPoints = results.detections
     hO, wO, _ = img.shape
-
-    
-
 
     if facesPoints:
         for id, detection in enumerate(facesPoints):
